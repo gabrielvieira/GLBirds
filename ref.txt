@@ -1,3 +1,5 @@
 http://goanna.cs.rmit.edu.au/~gl/teaching/Interactive3D/2012/compiling.html
 
 http://www.inf.pucrs.br/~manssour/OpenGL/Animacao.html
+
+https://stackoverflow.com/questions/7006213/how-do-you-display-images-in-opengl
