@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="i3d_ass2">
+      <UniqueIdentifier>{0bbeb6d1-74a2-4155-9167-dcbf81e5f6c6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\controls.c">
+      <Filter>i3d_ass2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\globals.c">
+      <Filter>i3d_ass2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.c">
+      <Filter>i3d_ass2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\parabola.c">
+      <Filter>i3d_ass2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\player.c">
+      <Filter>i3d_ass2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils.c">
+      <Filter>i3d_ass2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mesh.c">
+      <Filter>i3d_ass2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\light.c">
+      <Filter>i3d_ass2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gl.c">
+      <Filter>i3d_ass2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\camera.c">
+      <Filter>i3d_ass2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\material.c">
+      <Filter>i3d_ass2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\river.c">
+      <Filter>i3d_ass2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\road.c">
+      <Filter>i3d_ass2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\terrain.c">
+      <Filter>i3d_ass2</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\controls.h">
+      <Filter>i3d_ass2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gl.h">
+      <Filter>i3d_ass2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\globals.h">
+      <Filter>i3d_ass2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\parabola.h">
+      <Filter>i3d_ass2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\player.h">
+      <Filter>i3d_ass2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils.h">
+      <Filter>i3d_ass2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\mesh.h">
+      <Filter>i3d_ass2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\light.h">
+      <Filter>i3d_ass2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\camera.h">
+      <Filter>i3d_ass2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\material.h">
+      <Filter>i3d_ass2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\river.h">
+      <Filter>i3d_ass2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\road.h">
+      <Filter>i3d_ass2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\terrain.h">
+      <Filter>i3d_ass2</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
