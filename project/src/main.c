@@ -143,6 +143,7 @@ snprintf(buffer, sizeof buffer, "Angulo inicial %f", t);
   for (bufp = buffer; *bufp; bufp++)
     glutBitmapCharacter( GLUT_BITMAP_TIMES_ROMAN_24 , *bufp);
 
+
   /* Frame rate */
   glColor3f(0.0, 0.0, 0.0);
   glRasterPos2i(10, 60);
@@ -155,6 +156,14 @@ snprintf(buffer, sizeof buffer, "Angulo inicial %f", t);
   glRasterPos2i(10, 40);
   snprintf(buffer, sizeof buffer, "velocidadeY %f", globals.player.vel.y);
 //   printf()
+  for (bufp = buffer; *bufp; bufp++)
+    glutBitmapCharacter( GLUT_BITMAP_TIMES_ROMAN_24 , *bufp);
+
+
+  /* Frame rate */
+  glColor3f(0.0, 0.0, 0.0);
+  glRasterPos2i(10, 20);
+  snprintf(buffer, sizeof buffer, "velocidadeZ %f", fabs(globals.player.vel.z));
   for (bufp = buffer; *bufp; bufp++)
     glutBitmapCharacter( GLUT_BITMAP_TIMES_ROMAN_24 , *bufp);
 // printf("test\n");
