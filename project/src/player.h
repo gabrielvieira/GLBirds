@@ -5,6 +5,7 @@ extern "C" {
 #endif
 
 #include "utils.h"
+#include "gl.h"
 
 typedef struct Player Player;
 typedef struct PlayerControls PlayerControls;
@@ -31,7 +32,7 @@ struct Player
 	// around the z axis.
 	float jumpRot;
 	float jumpSpeed;
-
+	GLuint tex;
 	// Flag to determine if the player is jumping.
 	bool jumpFlag;
 
@@ -40,7 +41,7 @@ struct Player
 	Material *material;
 };
 
-void initPlayer(Player *player, MaterialContainer *container, Mesh *mesh, vec3f pos, float turnSpeed, float jumpRot, float jumpSpeed);
+void initPlayer(Player *player, MaterialContainer *container, Mesh *mesh, vec3f pos, float turnSpeed, float jumpRot, float jumpSpeed, GLuint tex);
 void renderPlayer(Player *player, DebugControls *controls);
 
 void updatePlayer(Player *player, PlayerControls *controls, float dt);

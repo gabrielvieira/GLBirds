@@ -36,15 +36,17 @@ void initGlobals(Globals *globals)
 	//void initTerrain(Terrain *terrain, MaterialContainer *container, vec3f pos, float width, float height, size_t rows, size_t cols);
 	initTerrain(&globals->terrain, &globals->materials, cVec3f(0, 0, 0), 100, 100, 8, 4,grassTexture);
 
+	GLuint birdTexture = loadTexture("../data/RedBird.png");
 	//
-	initPlayer(&globals->player, &globals->materials, globals->sphere, cVec3f(0, 0.5, 0), 90, 0, 1);
+	initPlayer(&globals->player, &globals->materials, globals->sphere, cVec3f(0, 0.5, 0), 90, 0, 1,birdTexture);
 	initParabola(&globals->parabola, &globals->player);
 	attachCameraToPlayer(&globals->camera, &globals->player);
 
+	GLuint pigTexture = loadTexture("../data/pig.png");
 	// You could add this to the material if you prefer.
 	// GLuint logTexture = loadTexture("../data/wood.jpg");
 	//void initPig(Pig *pig, MaterialContainer *container, Mesh *mesh, vec3f pos);
-	initPig(&globals->pig,&globals->materials,globals->sphere,cVec3f(randomX, 0.5, randomZ));
+	initPig(&globals->pig,&globals->materials,globals->sphere,cVec3f(randomX, 0.5, randomZ), pigTexture);
 
 	initRoad(&globals->road, &globals->materials, globals->cube, cVec3f(4, 0, 0), cVec3f(-50, 0, -20), cVec3f(50, 0, 0));
 	// initRiver(&globals->river, &globals->materials, globals->cylinder, logTexture, cVec3f(4, 0, 0), cVec3f(-50, 0, 10), cVec3f(50, 0, 35));

@@ -111,7 +111,7 @@ static void orientPlayer(Player *player)
 //     \_| \_|\___| \__,_||_|     \_|   \__,_||_| |_| \___| \__||_| \___/ |_| |_||___/
 //
 */
-void initPlayer(Player *player, MaterialContainer *container, Mesh *mesh, vec3f pos, float turnSpeed, float jumpRot, float jumpSpeed)
+void initPlayer(Player *player, MaterialContainer *container, Mesh *mesh, vec3f pos, float turnSpeed, float jumpRot, float jumpSpeed,  GLuint tex)
 {
 	player->forward = cVec3f(0, 0, 1);
 	player->pos = pos;
@@ -120,6 +120,7 @@ void initPlayer(Player *player, MaterialContainer *container, Mesh *mesh, vec3f 
 	player->jumpRot = jumpRot;
 	player->turnSpeed = turnSpeed;
 	player->vel = cVec3f(0, 0, 0);
+	player->tex = tex;
 	player->mesh = mesh;
 	player->material = getMaterial(container, "red");
 }
@@ -127,9 +128,10 @@ void initPlayer(Player *player, MaterialContainer *container, Mesh *mesh, vec3f 
 void renderPlayer(Player *player, DebugControls *controls)
 {
 	glPushAttrib(GL_ENABLE_BIT | GL_LIGHTING_BIT | GL_COLOR_BUFFER_BIT);
-	glDisable(GL_TEXTURE_2D);
+	// glDisable(GL_TEXTURE_2D);
 
 	renderMaterial(player->material);
+	glBindTexture(GL_TEXTURE_2D, player->tex);
 
 	glPushMatrix();
 
