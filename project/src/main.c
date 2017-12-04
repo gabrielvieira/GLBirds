@@ -278,28 +278,28 @@ static void keyboardDown(unsigned char key, int x, int y)
 		exit(EXIT_SUCCESS);
 		break;
 
-	case 'p':
-		globals.debugControls.wireframeFlag = !globals.debugControls.wireframeFlag;
-		toggleWireframe(&globals.debugControls);
-		break;
+	// case 'p':
+	// 	globals.debugControls.wireframeFlag = !globals.debugControls.wireframeFlag;
+	// 	toggleWireframe(&globals.debugControls);
+	// 	break;
 
-	case 'l':
-		globals.debugControls.lightingFlag = !globals.debugControls.lightingFlag;
-		toggleLighting(&globals.debugControls);
-		break;
+	// case 'l':
+	// 	globals.debugControls.lightingFlag = !globals.debugControls.lightingFlag;
+	// 	toggleLighting(&globals.debugControls);
+	// 	break;
 
-	case 'n':
-		globals.debugControls.normalFlag = !globals.debugControls.normalFlag;
-		break;
+	// case 'n':
+	// 	globals.debugControls.normalFlag = !globals.debugControls.normalFlag;
+	// 	break;
 
-	case 't':
-		globals.debugControls.textureFlag = !globals.debugControls.textureFlag;
-		toggleTexturing(&globals.debugControls);
-		break;
+	// case 't':
+	// 	globals.debugControls.textureFlag = !globals.debugControls.textureFlag;
+	// 	toggleTexturing(&globals.debugControls);
+	// 	break;
 
-	case 'o':
-		globals.debugControls.axisFlag = !globals.debugControls.axisFlag;
-		break;
+	// case 'o':
+	// 	globals.debugControls.axisFlag = !globals.debugControls.axisFlag;
+	// 	break;
 
 	case ' ':
 		jump(&globals.player);

@@ -20,13 +20,13 @@ static vec3f getPosParametric(Parabola *parabola, vec3f dir, float t)
 		(0.5f * gravity * t * t), parabola->player->jumpSpeed * t * dir.z);
 }
 
-static float getFlightTime(Parabola *parabola)
+ float getFlightTime(Parabola *parabola)
 {
 	static float gravity = 9.8f;
 	return (2.0f * parabola->player->jumpSpeed * sinf(parabola->player->jumpRot)) / gravity;
 }
 
-static void drawDebugVector(vec3f pos, vec3f color, vec3f start, vec3f end)
+ void drawDebugVector(vec3f pos, vec3f color, vec3f start, vec3f end)
 {
 	// There's no need to include the pos.x here if you're using glTranslatef to position the parabola.
 	glColor3f(color.x, color.y, color.z);
@@ -34,7 +34,7 @@ static void drawDebugVector(vec3f pos, vec3f color, vec3f start, vec3f end)
 	glVertex3f(pos.x + start.x + end.x, pos.y + start.y + end.y, pos.z + start.z + end.z);
 }
 
-static void drawDebugLines(vec3f pos, DebugControls *controls, vec3f dydx, vec3f p)
+ void drawDebugLines(vec3f pos, DebugControls *controls, vec3f dydx, vec3f p)
 {
 	static float lineSize = 0.5f;
 
@@ -50,7 +50,7 @@ static void drawDebugLines(vec3f pos, DebugControls *controls, vec3f dydx, vec3f
 	}
 }
 
-static void drawLine(vec3f pos, vec3f color, vec3f p1, vec3f p2)
+ void drawLine(vec3f pos, vec3f color, vec3f p1, vec3f p2)
 {
 	// Again, no need to include pos if you're using glTranslatef.
 	glColor3f(color.x, color.y, color.z);
