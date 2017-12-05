@@ -187,11 +187,11 @@ static void render(void)
 	uploadProjection(&globals.camera);
 	uploadModelview(&globals.camera);
 
-	renderTerrain(&globals.terrain, &globals.debugControls);
-	renderPlayer(&globals.player, &globals.debugControls);
-	renderParabola(&globals.parabola, &globals.debugControls);
+	renderTerrain(&globals.terrain);
+	renderPlayer(&globals.player);
+	renderParabola(&globals.parabola);
 
-	renderPig(&globals.pig, &globals.debugControls);
+	renderPig(&globals.pig);
 
 	
 	displayInfo();

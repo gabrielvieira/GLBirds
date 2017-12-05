@@ -91,7 +91,7 @@ void initPlayer(Player *player, MaterialContainer *container, Mesh *mesh, vec3f 
 	player->material = getMaterial(container, "red");
 }
 
-void renderPlayer(Player *player, DebugControls *controls)
+void renderPlayer(Player *player)
 {
 	glPushAttrib(GL_ENABLE_BIT | GL_LIGHTING_BIT | GL_COLOR_BUFFER_BIT);
 	// glDisable(GL_TEXTURE_2D);
@@ -106,7 +106,7 @@ void renderPlayer(Player *player, DebugControls *controls)
 
 	glPushMatrix();
 	glScalef(0.5f, 0.5f, 0.5f);
-	renderMesh(player->mesh, controls);
+	renderMesh(player->mesh);
 	glPopMatrix();
 
 	glPopMatrix();

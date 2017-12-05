@@ -38,8 +38,6 @@ struct DebugControls
 {
 	bool wireframeFlag;
 	bool textureFlag;
-	bool normalFlag;
-	bool axisFlag;
 };
 
 void initDebugControls(DebugControls *controls);

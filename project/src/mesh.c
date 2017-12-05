@@ -221,7 +221,7 @@ Mesh *makeGrid(float width, float height, size_t rows, size_t cols)
 	return mesh;
 }
 
-void renderMesh(Mesh *mesh, DebugControls *controls)
+void renderMesh(Mesh *mesh)
 {
 	glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
 	glEnableClientState(GL_VERTEX_ARRAY);
@@ -231,12 +231,8 @@ void renderMesh(Mesh *mesh, DebugControls *controls)
 	glVertexPointer(3, GL_FLOAT, sizeof(Vertex), mesh->vertices);
 	glNormalPointer(GL_FLOAT, sizeof(Vertex), &mesh->vertices[0].n);
 	glTexCoordPointer(2, GL_FLOAT, sizeof(Vertex), &mesh->vertices[0].t);
-
 	glDrawElements(GL_TRIANGLES, mesh->nIndices, GL_UNSIGNED_INT, mesh->indices);
 	glPopClientAttrib();
-
-	if (controls->axisFlag)
-		renderAxis();
-	renderLines(mesh, controls->normalFlag, false, false);
+	renderLines(mesh, false, false, false);
 }
 

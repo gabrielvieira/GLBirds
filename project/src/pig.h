@@ -23,7 +23,7 @@ struct Pig
 };
 
 void initPig(Pig *pig, MaterialContainer *container, Mesh *mesh, vec3f pos, GLuint tex);
-void renderPig(Pig *pig, DebugControls *controls);
+void renderPig(Pig *pig);
 
 #if __cplusplus
 }

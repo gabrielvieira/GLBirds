@@ -11,7 +11,7 @@ void initPig(Pig *pig, MaterialContainer *container, Mesh *mesh, vec3f pos, GLui
 	pig->material = getMaterial(container, "green");
 }
 
-void renderPig(Pig *pig, DebugControls *controls)
+void renderPig(Pig *pig)
 {
 	glPushAttrib(GL_ENABLE_BIT | GL_LIGHTING_BIT | GL_COLOR_BUFFER_BIT);
 	// glDisable(GL_TEXTURE_2D);
@@ -23,7 +23,7 @@ void renderPig(Pig *pig, DebugControls *controls)
 	glTranslatef(pig->pos.x, pig->pos.y, pig->pos.z);
 	glPushMatrix();
 	glScalef(0.5f, 0.5f, 0.5f);
-	renderMesh(pig->mesh, controls);
+	renderMesh(pig->mesh);
 	glPopMatrix();
 
 	glPopMatrix();

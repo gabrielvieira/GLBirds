@@ -30,7 +30,7 @@ struct Player
 };
 
 void initPlayer(Player *player, MaterialContainer *container, Mesh *mesh, vec3f pos, float turnSpeed, float jumpRot, float jumpSpeed, GLuint tex);
-void renderPlayer(Player *player, DebugControls *controls);
+void renderPlayer(Player *player);
 
 void updatePlayer(Player *player, PlayerControls *controls, float dt);
 

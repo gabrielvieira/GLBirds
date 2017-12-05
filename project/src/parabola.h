@@ -17,7 +17,7 @@ struct Parabola
 };
 
 void initParabola(Parabola *parabola, Player *player);
-void renderParabola(Parabola *parabola, DebugControls *controls);
+void renderParabola(Parabola *parabola);
 
 #if __cplusplus
 }

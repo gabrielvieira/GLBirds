@@ -32,7 +32,7 @@ struct Terrain
 
 void initTerrain(Terrain *terrain, MaterialContainer *container, vec3f pos, float width, float height, size_t rows, size_t cols, GLuint tex);
 
-void renderTerrain(Terrain *terrain, DebugControls *controls);
+void renderTerrain(Terrain *terrain);
 
 #if __cplusplus
 }

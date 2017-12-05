@@ -16,7 +16,7 @@ void initTerrain(Terrain *terrain, MaterialContainer *container, vec3f pos, floa
 	terrain->material = getMaterial(container, "terrain");
 }
 
-void renderTerrain(Terrain *terrain, DebugControls *controls)
+void renderTerrain(Terrain *terrain)
 {
 	glPushAttrib(GL_ENABLE_BIT | GL_LIGHTING_BIT | GL_COLOR_BUFFER_BIT);
 
@@ -26,7 +26,7 @@ void renderTerrain(Terrain *terrain, DebugControls *controls)
 	glPushMatrix();
 
 	glTranslatef(terrain->pos.x, terrain->pos.y, terrain->pos.z);
-	renderMesh(terrain->mesh, controls);
+	renderMesh(terrain->mesh);
 
 	glPopMatrix();
 

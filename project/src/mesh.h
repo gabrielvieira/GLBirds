@@ -42,7 +42,7 @@ Mesh *makeSphere();
 Mesh *makeEllipsoid(float a, float b, float c);
 Mesh *makeGrid(float width, float height, size_t rows, size_t cols);
 
-void renderMesh(Mesh *mesh, DebugControls *controls);
+void renderMesh(Mesh *mesh);
 
 #if __cplusplus
 }

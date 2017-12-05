@@ -23,6 +23,4 @@ void initDebugControls(DebugControls *controls)
 {
 	controls->wireframeFlag = false;
 	controls->textureFlag = true;
-	controls->normalFlag = false;
-	controls->axisFlag = false;
 }
