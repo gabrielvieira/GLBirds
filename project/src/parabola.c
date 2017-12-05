@@ -23,22 +23,6 @@ static vec3f getPosParametric(Parabola *parabola, vec3f dir, float t)
 	glVertex3f(pos.x + start.x + end.x, pos.y + start.y + end.y, pos.z + start.z + end.z);
 }
 
-//  void drawDebugLines(vec3f pos, DebugControls *controls, vec3f dydx, vec3f p)
-// {
-// 	static float lineSize = 0.5f;
-
-// 	if (!controls->normalFlag)
-// 		return;
-
-// 	vec3f nColor = cVec3f(1, 1, 0);
-
-// 	if (controls->normalFlag)
-// 	{
-// 		vec3f n = mulVec3f(normaliseVec3f(cVec3f(dydx.x, dydx.y, dydx.z)), lineSize);
-// 		drawDebugVector(pos, nColor, p, n);
-// 	}
-// }
-
  void drawLine(vec3f pos, vec3f color, vec3f p1, vec3f p2)
 {
 	glColor3f(color.x, color.y, color.z);
@@ -78,7 +62,6 @@ void renderParabola(Parabola *parabola)
 		
 		vec3f dydx = cVec3f(parabola->player->jumpSpeed * dir.x, parabola->player->jumpSpeed * dir.y - gravity * t1,
 			parabola->player->jumpSpeed * dir.z);
-		// drawDebugLines(parabola->pos, controls, dydx, p1);
 	}
 	glEnd();
 

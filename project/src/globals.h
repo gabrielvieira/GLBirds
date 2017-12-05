@@ -23,7 +23,6 @@ struct Globals
 	Terrain terrain;
 	PlayerControls playerControls;
 	CameraControls cameraControls;
-	DebugControls debugControls;
 	MaterialContainer materials;
 	Player player;
 	Pig pig;

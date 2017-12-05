@@ -9,7 +9,6 @@ extern "C" {
 
 typedef struct Player Player;
 typedef struct PlayerControls PlayerControls;
-typedef struct DebugControls DebugControls;
 typedef struct Mesh Mesh;
 typedef struct Material Material;
 typedef struct MaterialContainer MaterialContainer;

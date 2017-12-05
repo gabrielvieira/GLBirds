@@ -8,7 +8,6 @@ extern "C" {
 
 typedef struct PlayerControls PlayerControls;
 typedef struct CameraControls CameraControls;
-typedef struct DebugControls DebugControls;
 
 struct PlayerControls
 {
@@ -32,15 +31,6 @@ struct CameraControls
 };
 
 void initCameraControls(CameraControls *controls);
-
-
-struct DebugControls
-{
-	bool wireframeFlag;
-	bool textureFlag;
-};
-
-void initDebugControls(DebugControls *controls);
 
 #if __cplusplus
 }

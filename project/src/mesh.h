@@ -11,7 +11,6 @@ extern "C" {
 
 typedef struct Vertex Vertex;
 typedef struct Mesh Mesh;
-typedef struct DebugControls DebugControls;
 
 struct Vertex
 {

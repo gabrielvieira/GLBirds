@@ -12,7 +12,6 @@ typedef struct Terrain Terrain;
 typedef struct Mesh Mesh;
 typedef struct Material Material;
 typedef struct MaterialContainer MaterialContainer;
-typedef struct DebugControls DebugControls;
 
 struct Terrain
 {

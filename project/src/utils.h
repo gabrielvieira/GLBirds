@@ -30,7 +30,6 @@ extern "C" {
 
 #define UNUSED(x) (void)(x)
 
-typedef struct DebugControls DebugControls;
 
 typedef struct vec2f vec2f;
 typedef struct vec3f vec3f;

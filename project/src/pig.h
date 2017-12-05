@@ -8,7 +8,6 @@ extern "C" {
 #include "gl.h"
 
 typedef struct Pig Pig;
-typedef struct DebugControls DebugControls;
 typedef struct Mesh Mesh;
 typedef struct Material Material;
 typedef struct MaterialContainer MaterialContainer;

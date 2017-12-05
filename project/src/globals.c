@@ -22,18 +22,14 @@ void initGlobals(Globals *globals)
 
 	initPlayerControls(&globals->playerControls);
 	initCameraControls(&globals->cameraControls);
-	initDebugControls(&globals->debugControls);
 
 	globals->sphere = makeSphere();
 	globals->collision = 0;
-
+	//texturas e alocação das coisas
 	initMaterials(&globals->materials);
-
 	GLuint grassTexture = loadTexture("../data/grass.jpg");
 	initTerrain(&globals->terrain, &globals->materials, cVec3f(0, 0, 0), 100, 100, 8, 4,grassTexture);
-
 	GLuint birdTexture = loadTexture("../data/RedBird.png");
-	//
 	initPlayer(&globals->player, &globals->materials, globals->sphere, cVec3f(0, 0.5, 0), 90, 0, 1,birdTexture);
 	initParabola(&globals->parabola, &globals->player);
 	attachCameraToPlayer(&globals->camera, &globals->player);

@@ -8,7 +8,6 @@ extern "C" {
 
 typedef struct Parabola Parabola;
 typedef struct Player Player;
-typedef struct DebugControls DebugControls;
 
 struct Parabola
 {

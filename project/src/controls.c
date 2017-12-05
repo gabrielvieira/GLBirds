@@ -18,9 +18,3 @@ void initCameraControls(CameraControls *controls)
 	controls->rotating = false;
 	controls->zooming = false;
 }
-
-void initDebugControls(DebugControls *controls)
-{
-	controls->wireframeFlag = false;
-	controls->textureFlag = true;
-}

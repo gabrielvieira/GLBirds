@@ -271,36 +271,11 @@ static void keyboardDown(unsigned char key, int x, int y)
 	case 'q':
 		exit(EXIT_SUCCESS);
 		break;
-
-	// case 'p':
-	// 	globals.debugControls.wireframeFlag = !globals.debugControls.wireframeFlag;
-	// 	toggleWireframe(&globals.debugControls);
-	// 	break;
-
-	// case 'l':
-	// 	globals.debugControls.lightingFlag = !globals.debugControls.lightingFlag;
-	// 	toggleLighting(&globals.debugControls);
-	// 	break;
-
-	// case 'n':
-	// 	globals.debugControls.normalFlag = !globals.debugControls.normalFlag;
-	// 	break;
-
-	// case 't':
-	// 	globals.debugControls.textureFlag = !globals.debugControls.textureFlag;
-	// 	toggleTexturing(&globals.debugControls);
-	// 	break;
-
-	// case 'o':
-	// 	globals.debugControls.axisFlag = !globals.debugControls.axisFlag;
-	// 	break;
-
 	case ' ':
 		jump(&globals.player);
 		break;
 
 	default:
-		// Any keys that you want to handle repeats for (ie, holding the key instead of just pressing) should be handled from updateKeyChar.
 		updateKeyChar(key, true);
 		break;
 	}
@@ -310,7 +285,6 @@ static void keyboardUp(unsigned char key, int x, int y)
 {
 	UNUSED(x);
 	UNUSED(y);
-
 	updateKeyChar(key, false);
 }
 
@@ -318,7 +292,6 @@ static void keyboardSpecialDown(int key, int x, int y)
 {
 	UNUSED(x);
 	UNUSED(y);
-
 	updateKeyInt(key, true);
 }
 
@@ -326,7 +299,6 @@ static void keyboardSpecialUp(int key, int x, int y)
 {
 	UNUSED(x);
 	UNUSED(y);
-
 	updateKeyInt(key, false);
 }
 
@@ -338,12 +310,10 @@ static void cleanup(void)
 int main(int argc, char **argv)
 {
 	initCamera(&globals.camera, 0, 1024, 720);
-
 	glutInit(&argc, argv);
 	glutInitWindowSize(globals.camera.right, globals.camera.height);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
 	glutCreateWindow("Projectile Motion");
-
 	glutDisplayFunc(render);
 	glutIdleFunc(update);
 	glutReshapeFunc(reshape);
@@ -354,13 +324,9 @@ int main(int argc, char **argv)
 	glutKeyboardUpFunc(keyboardUp);
 	glutSpecialFunc(keyboardSpecialDown);
 	glutSpecialUpFunc(keyboardSpecialUp);
-
 	atexit(cleanup);
-
 	initGlobals(&globals);
-
 	glutMainLoop();
-
 	return EXIT_SUCCESS;
 }
 
