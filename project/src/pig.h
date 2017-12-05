@@ -15,13 +15,9 @@ typedef struct MaterialContainer MaterialContainer;
 
 struct Pig
 {
-	// These are current position/velocity, the player does not store initial values for these. Heading represents
-	// rotation of the player around the y axis.
 	vec3f pos;
-	// Current forward vector of the player, which is a combination of the jumpRot/jumpSpeed and the heading.
 	vec3f forward;
 	GLuint tex;
-	// Now we have a mesh and a material that is used to render the player.
 	Mesh *mesh;
 	Material *material;
 };

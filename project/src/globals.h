@@ -7,10 +7,7 @@ extern "C" {
 #include "controls.h"
 #include "parabola.h"
 #include "player.h"
-#include "road.h"
-#include "river.h"
 #include "terrain.h"
-#include "light.h"
 #include "camera.h"
 #include "material.h"
 #include "mesh.h"
@@ -24,26 +21,14 @@ struct Globals
 {
 	Camera camera;
 	Terrain terrain;
-
 	PlayerControls playerControls;
 	CameraControls cameraControls;
 	DebugControls debugControls;
-
 	MaterialContainer materials;
-
 	Player player;
 	Pig pig;
 	Parabola parabola;
-
-	Road road;
-	River river;
-
-	Light light;
-
 	Mesh *sphere;
-	Mesh *cube;
-	Mesh *cylinder;
-
 	int   collision;
 };
 

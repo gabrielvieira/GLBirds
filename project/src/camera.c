@@ -5,7 +5,6 @@
 
 void initCamera(Camera *camera, int left, int right, int height)
 {
-	// Whole bunch of initial values, feel free to pass some of these in as arguments, I couldn't be bothered.
 	camera->left = left;
 	camera->right = right;
 	camera->height = height;
@@ -24,12 +23,9 @@ void initCamera(Camera *camera, int left, int right, int height)
 
 void uploadModelview(Camera *camera)
 {
-	// Uploads the camera's tansforms to the modelview matrix. Call this before doing any other rendering and you
-	// can position your geometry in the world without having to worry about the camera at all.
 	glLoadIdentity();
 	if (camera->zoom > 0)
 	{
-		// Translation won't work if this isn't in perspective mode, in which case scale needs to be used instead.
 		if (camera->perspectiveFlag)
 			glTranslatef(0, 0, -camera->zoom);
 		else
@@ -44,7 +40,6 @@ void uploadModelview(Camera *camera)
 
 void uploadProjection(Camera *camera)
 {
-	// Fairly standard projection matrix, can be either perspective or orthographic.
 	float aspect = (float) (camera->right - camera->left) / (float) camera->height;
 
 	glViewport(camera->left, 0, camera->right - camera->left, camera->height);
@@ -59,14 +54,12 @@ void uploadProjection(Camera *camera)
 
 void updateRotation(Camera *camera, int dx, int dy)
 {
-	// Rotates the camera using horizontal and vertical mouse movement.
 	camera->rot.x += dx * camera->sensitivity;
 	camera->rot.y += dy * camera->sensitivity;
 }
 
 void updateZoom(Camera *camera, int dy)
 {
-	// Zooms the camera using vertical mouse movement.
 	camera->zoom -= dy * camera->zoom * camera->sensitivity * 0.1f;
 	camera->zoom = clamp(camera->zoom, camera->nearPlane, camera->farPlane / 2.0f);
 }
@@ -78,7 +71,6 @@ void attachCameraToPlayer(Camera *camera, Player *player)
 
 vec3f getViewPos(Camera *camera)
 {
-	// In case you want to get the actual position of the camera in the world, not needed for the assignment.
 	vec3f pos = camera->pos;
 	if (camera->player)
 		pos = addVec3f(pos, camera->player->pos);

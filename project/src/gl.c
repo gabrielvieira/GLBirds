@@ -1,6 +1,6 @@
 #include "gl.h"
 
-// Program uses the Simple OpenGL Image Library for loading textures: http://www.lonesock.net/soil.html
+// http://www.lonesock.net/soil.html
 #include <SOIL/SOIL.h>
 
 GLuint loadTexture(const char *filename)

@@ -11,7 +11,6 @@
 // Materials contain a lot of vec4 values, loading them is a lot easier using this.
 static vec4f getVec4f()
 {
-	// In reality you probably shouldn't use strtok. Unfortunately I'm not a very good programmer so I've used it.
 	char *xc = strtok(0, TAGS);
 	char *yc = strtok(0, TAGS);
 	char *zc = strtok(0, TAGS);
@@ -23,8 +22,6 @@ static vec4f getVec4f()
 
 void initMaterials(MaterialContainer *container)
 {
-	// I've stored all the materials in a materials.txt file to make things easier for you. If you want to add more
-	// materials just throw them in there.
 	container->nMaterials = 0;
 	container->capacity = 1;
 	container->materials = (Material*) malloc(sizeof(Material));
@@ -33,7 +30,6 @@ void initMaterials(MaterialContainer *container)
 
 void renderMaterial(Material *material)
 {
-	// Nothing special, just applying values stored in the material.
 	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, (const GLfloat*) &(material->ambient));
 	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, (const GLfloat*) &(material->diffuse));
 	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, (const GLfloat*) &(material->specular));
@@ -42,7 +38,6 @@ void renderMaterial(Material *material)
 
 void dMaterialContainer(MaterialContainer *container)
 {
-	// Always have to remember to free memory that you've allocated.
 	for (int i = 0; i < container->nMaterials; i++)
 		free(container->materials[i].name);
 	free(container->materials);
@@ -50,7 +45,6 @@ void dMaterialContainer(MaterialContainer *container)
 
 Material *addMaterial(MaterialContainer *container, const char *name)
 {
-	// Fairly basic push function for adding to the tail of a vector.
 	if (container->nMaterials >= container->capacity)
 	{
 		container->capacity *= 2;
@@ -65,7 +59,6 @@ Material *addMaterial(MaterialContainer *container, const char *name)
 
 Material *getMaterial(MaterialContainer *container, const char *name)
 {
-	// Retrieves a material from the container that matches the given name, if no such material exists you get nothing.
 	for (int i = 0; i < container->nMaterials; i++)
 	{
 		if (strcmp(container->materials[i].name, name) != 0)
@@ -77,10 +70,6 @@ Material *getMaterial(MaterialContainer *container, const char *name)
 
 void loadMaterials(MaterialContainer *container, const char *filename)
 {
-	// And finally we need to load the materials from a file. You may think all this is a bit overkill but it only
-	// takes a few minutes to set it all up and in return I get a nice easy way to add new materials and use them.
-	// This is a similar approach to what I used in the assignment 3 implementation for loading the frog model and its
-	// jump/land/ribbit animations (although I'm not expecting you to load those from files if you don't want to).
 	FILE *file = fopen(filename, "r");
 	if (!file)
 	{

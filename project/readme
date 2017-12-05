@@ -1,9 +1,0 @@
-For compiling on Linux, go into the gcc folder and run 'make' then go back to this folder and run the executable.
-
-For compiling on Windows, go into the vs folder and use the .sln file provided.
-
-All source files are in the src folder.
-
-You may need to copy glut32.dll/glew32.dll into the Debug/Release folders that visual studio creates if you're on Windows.
-
-All source/header files are provided in the src folder.

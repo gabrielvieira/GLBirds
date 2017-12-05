@@ -77,7 +77,7 @@ float getAngle2 (float x1,float y1,float z1,float x2,float y2,float z2)
     return acos(dist2/dist)*180/3.1415926;
 }
 
-void displayOSD()
+void displayInfo()
 {
   char buffer[30];
   char *bufp;
@@ -187,18 +187,15 @@ static void render(void)
 	uploadProjection(&globals.camera);
 	uploadModelview(&globals.camera);
 
-	renderLight(&globals.light);
 	renderTerrain(&globals.terrain, &globals.debugControls);
-	
 	renderPlayer(&globals.player, &globals.debugControls);
 	renderParabola(&globals.parabola, &globals.debugControls);
 
 	renderPig(&globals.pig, &globals.debugControls);
 
 	
-	displayOSD();
-	// renderRoad(&globals.road, &globals.debugControls);
-	// renderRiver(&globals.river, &globals.debugControls);
+	displayInfo();
+
 
 	glutSwapBuffers();
 }
@@ -218,9 +215,6 @@ static void update(void)
 	float dt = getDeltaTime();
 
 	updatePlayer(&globals.player, &globals.playerControls, dt);
-
-	// updateRoad(&globals.road, dt);
-	// updateRiver(&globals.river, dt);
 	collisionDetection();
 
 	if (globals.player.pos.y <= 0)

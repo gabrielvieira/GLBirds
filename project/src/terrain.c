@@ -5,8 +5,6 @@
 
 void initTerrain(Terrain *terrain, MaterialContainer *container, vec3f pos, float width, float height, size_t rows, size_t cols, GLuint tex)
 {
-	// It's pretty debateable whether this should have its own file. I wouldn't necessarily say you're wrong if you
-	// put this stuff in globals.
 	terrain->pos = pos;
 	terrain->width = width;
 	terrain->height = height;

@@ -16,7 +16,6 @@ struct PlayerControls
 	bool down;
 	bool left;
 	bool right;
-
 	bool upSpeed;
 	bool downSpeed;
 	bool upRot;
@@ -37,7 +36,6 @@ void initCameraControls(CameraControls *controls);
 
 struct DebugControls
 {
-	bool lightingFlag;
 	bool wireframeFlag;
 	bool textureFlag;
 	bool normalFlag;
@@ -45,11 +43,6 @@ struct DebugControls
 };
 
 void initDebugControls(DebugControls *controls);
-
-void toggleWireframe(DebugControls *controls);
-void toggleLighting(DebugControls *controls);
-void toggleTexturing(DebugControls *controls);
-
 
 #if __cplusplus
 }
